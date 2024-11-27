@@ -67,7 +67,7 @@ Before getting started, ensure that you have the following prerequisites install
 9. Open your web browser and visit http://localhost:3000 to access this App.
 
 ### Video Explanation about working of Project  🎥
-https://drive.google.com/file/d/1y6TnYxgNwB_-IHcpUt-mHEMM3y9lXiEk/view?usp=drive_link
+https://github.com/user-attachments/assets/a2c10620-2a0e-4ee0-94aa-c3fa3a3fc0a9
 
 
 <!-- CONTACT -->
