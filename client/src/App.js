@@ -1,6 +1,6 @@
-import {useRef, useState, useEffect} from 'react'; 
+import { useRef, useState, useEffect } from 'react';
 import './App.css';
-import {uploadFile} from './services/api';
+import { uploadFile } from './services/api';
 
 function App() {
   const [file, setFile] = useState('');
@@ -10,9 +10,9 @@ function App() {
 
   const logo = 'https://i.pinimg.com/originals/16/46/24/1646243661201a0892cc4b1a64fcbacf.jpg';
 
-  useEffect(()=>{
+  useEffect(() => {
     const getImage = async () => {
-      if(file){
+      if (file) {
         const data = new FormData();
         data.append("name", file.name);
         data.append("file", file);
@@ -31,16 +31,16 @@ function App() {
 
   return (
     <div className='container'>
-      <img src={logo} alt='banner'/>
+      <img src={logo} alt='banner' />
       <div className='wrapper'>
         <h1>Simple File Sharing App!</h1>
         <p>Upload and share the download link.</p>
 
         <button onClick={() => onUploadClick()}>Upload</button>
-        <input 
+        <input
           type="file"
           ref={fileInputRef}
-          style={{display: 'none'}}
+          style={{ display: 'none' }}
           onChange={(e) => setFile(e.target.files[0])}
         />
 
