@@ -66,8 +66,8 @@ Before getting started, ensure that you have the following prerequisites install
 
 9. Open your web browser and visit http://localhost:3000 to access this App.
 
-### Video 🎥
-https://github.com/Vinayak409/File-Sharing-App-MERN-Stack/assets/75150039/5feccac6-8004-4a4b-9e67-3db542b159c9
+### Video Explanation about working of Project  🎥
+https://drive.google.com/file/d/1y6TnYxgNwB_-IHcpUt-mHEMM3y9lXiEk/view?usp=drive_link
 
 
 <!-- CONTACT -->
