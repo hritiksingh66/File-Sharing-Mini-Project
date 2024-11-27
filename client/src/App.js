@@ -31,16 +31,16 @@ function App() {
 
   return (
     <div className='container'>
-      <img src={logo} alt='banner' />
+      <img src={logo} alt='banner'/>
       <div className='wrapper'>
         <h1>Simple File Sharing App!</h1>
         <p>Upload and share the download link.</p>
 
         <button onClick={() => onUploadClick()}>Upload</button>
-        <input
+        <input 
           type="file"
           ref={fileInputRef}
-          style={{ display: 'none' }}
+          style={{display: 'none'}}
           onChange={(e) => setFile(e.target.files[0])}
         />
 

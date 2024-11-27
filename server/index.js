@@ -7,9 +7,9 @@ const app = express();
 
 
 const corsOptions = {
-    origin: 'http://localhost:3000', // Frontend URL
-    methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allow all HTTP methods
-    allowedHeaders: 'Content-Type,Authorization', // Allow specific headers
+    origin: 'http://localhost:3000', 
+    methods: 'GET,POST,PUT,DELETE,OPTIONS', 
+    allowedHeaders: 'Content-Type,Authorization',
   };
 
 
