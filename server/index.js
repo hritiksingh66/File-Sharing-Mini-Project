@@ -17,7 +17,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use("/", router);
 
-const port = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
 DBConnection();
 
