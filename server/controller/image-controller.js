@@ -1,27 +1,44 @@
 import File from "../models/file.js";
 
+// export const uploadImage = async (request, response) => {
+//     try {
+//         if (!request.file) {
+//             return response.status(400).json({ error: "No file uploaded" });
+//         }
+
+//         const fileObj = {
+//             path: request.file.path,
+//             name: request.file.originalname,
+//         };
+
+//         const file = await File.create(fileObj);
+
+//         // ✅ Base URL env se lo (Render pe localhost mat use karo)
+//         const fileUrl = `${process.env.BASE_URL}/file/${file._id}`;
+
+//         response.status(200).json({ path: fileUrl });
+//     } catch (error) {
+//         console.error("Upload error:", error.message);
+//         response.status(500).json({ error: "Error while uploading file" });
+//     }
+// };
+
+const backendURL = process.env.BASE_URL || "http://localhost:8000";
+
 export const uploadImage = async (request, response) => {
+    const fileObj = {
+        path: request.file.path,
+        name: request.file.originalname
+    };
     try {
-        if (!request.file) {
-            return response.status(400).json({ error: "No file uploaded" });
-        }
-
-        const fileObj = {
-            path: request.file.path,
-            name: request.file.originalname,
-        };
-
         const file = await File.create(fileObj);
-
-        // ✅ Base URL env se lo (Render pe localhost mat use karo)
-        const fileUrl = `${process.env.BASE_URL}/file/${file._id}`;
-
-        response.status(200).json({ path: fileUrl });
+        response.status(200).json({ path: `${backendURL}/file/${file._id}` });
     } catch (error) {
-        console.error("Upload error:", error.message);
-        response.status(500).json({ error: "Error while uploading file" });
+        console.error(error.message);
+        response.status(500).json({ error: error.message });
     }
 };
+
 
 export const downloadImage = async (request, response) => {
     try {
