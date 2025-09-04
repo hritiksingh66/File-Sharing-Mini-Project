@@ -5,16 +5,17 @@ import DBConnection from "./database/db.js";
 
 const app = express();
 
-
 const corsOptions = {
-    origin: 'http://localhost:3000', 
-    methods: 'GET,POST,PUT,DELETE,OPTIONS', 
-    allowedHeaders: 'Content-Type,Authorization',
-  };
-
-
+  origin: [
+    "http://localhost:3000", 
+    "https://file-sharing-mini-project-1.onrender.com"
+  ],
+  methods: "GET,POST,PUT,DELETE,OPTIONS",
+  allowedHeaders: "Content-Type,Authorization",
+};
 
 app.use(cors(corsOptions));
+
 app.use("/", router);
 
 const PORT = process.env.PORT || 4000;
