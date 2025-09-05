@@ -81,6 +81,10 @@ function App() {
             </div>
           </div>
         )}
+        
+        <footer className='footer'>
+          <p>&copy; 2025 ShareIt. All rights reserved. | Made with ❤️ by <a href="https://hritiksingh66.github.io/portfolio-website/" target="_blank" rel="noopener noreferrer" className='author-link'>Hritik Singh</a></p>
+        </footer>
       </div>
     </div>
   );
